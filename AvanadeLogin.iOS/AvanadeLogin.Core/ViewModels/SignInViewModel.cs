@@ -1,10 +1,10 @@
 ﻿using System;
+using MvvmCross.ViewModels;
+
 namespace AvanadeLogin.Core.ViewModels
 {
-    public class SignInViewModel
+    public class SignInViewModel : MvxViewModel
     {
-        public SignInViewModel()
-        {
-        }
+       
     }
 }
