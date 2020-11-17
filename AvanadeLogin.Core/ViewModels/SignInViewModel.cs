@@ -16,14 +16,23 @@ namespace AvanadeLogin.Core.ViewModels
     {
         private readonly IMvxNavigationService _navigationService;
         private readonly IAuthenticationService _authenticationService;
+        private readonly IDialogueService _dialogueService;
 
         public SignInViewModel(IMvxNavigationService navigationService,
-            IAuthenticationService authenticationService)
+            IAuthenticationService authenticationService,
+            IDialogueService dialogueService)
         {
             _navigationService = navigationService;
             _authenticationService = authenticationService;
+            _dialogueService = dialogueService;
 
-            this.SignInCommand = ReactiveCommand.Create(() => _authenticationService.AuthenticateUser(UserName, Password),
+            this.SignInCommand = ReactiveCommand.CreateFromTask(async () =>
+            {
+                var result = await _authenticationService.AuthenticateUser(UserName, Password);
+
+                if (result)
+                    _dialogueService.ShowInformation("Great Success!!");
+            },
                 this.WhenAnyValue(
                 x => x.UserName, x => x.Password,
                 (userName, password) =>
