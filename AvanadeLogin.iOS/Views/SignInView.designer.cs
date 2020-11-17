@@ -16,6 +16,10 @@ namespace TipCalc.UI.iOS.Views
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton NewAccountButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField PasswordTextField { get; set; }
 
         [Outlet]
@@ -28,6 +32,11 @@ namespace TipCalc.UI.iOS.Views
 
         void ReleaseDesignerOutlets ()
         {
+            if (NewAccountButton != null) {
+                NewAccountButton.Dispose ();
+                NewAccountButton = null;
+            }
+
             if (PasswordTextField != null) {
                 PasswordTextField.Dispose ();
                 PasswordTextField = null;

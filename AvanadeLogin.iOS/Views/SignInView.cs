@@ -7,14 +7,20 @@ namespace TipCalc.UI.iOS.Views
 {
     public partial class SignInView : MvxViewController<SignInViewModel>
     {
-        public SignInView() : base("SignInView", null)
+        public SignInView() : base(nameof(SignInView), null)
         {
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+
+            var set = this.CreateBindingSet();
+            set.Bind(UsernameTextField).For(x => x.Text).To(vm => vm.UserName);
+            set.Bind(PasswordTextField).For(x => x.Text).To(vm => vm.Password);
+            set.Bind(SigninButton).To(vm => vm.SignInCommand);
+            set.Bind(NewAccountButton).To(vm => vm.CreateAccountCommand);
+            set.Apply();
         }
     }
 }
