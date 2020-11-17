@@ -16,8 +16,8 @@ namespace TipCalc.UI.iOS.Views
             base.ViewDidLoad();
 
             var set = this.CreateBindingSet();
-            set.Bind(UsernameTextField).For(x => x.Text).To(vm => vm.UserName);
-            set.Bind(PasswordTextField).For(x => x.Text).To(vm => vm.Password);
+            set.Bind(UsernameTextField).To(vm => vm.UserName);
+            set.Bind(PasswordTextField).To(vm => vm.Password);
             set.Bind(SigninButton).To(vm => vm.SignInCommand);
             set.Bind(NewAccountButton).To(vm => vm.CreateAccountCommand);
             set.Apply();

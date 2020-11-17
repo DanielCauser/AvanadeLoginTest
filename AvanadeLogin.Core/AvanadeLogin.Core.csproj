@@ -9,5 +9,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="7.0.0" />
+    <PackageReference Include="ReactiveUI" Version="12.1.5" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.3.1" />
   </ItemGroup>
 </Project>
