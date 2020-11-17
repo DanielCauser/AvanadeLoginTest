@@ -5,5 +5,6 @@ namespace AvanadeLogin.Core.Services
     {
         void ShowInformation(string message);
         void ShowError(string message);
+        void ShowValidationError(string message);
     }
 }

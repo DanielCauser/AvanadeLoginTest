@@ -21,5 +21,10 @@ namespace AvanadeLogin.Core.Services
         {
             _userDialogs.Alert(message, "An error occured.", "Ok");
         }
+
+        public void ShowValidationError(string message)
+        {
+            _userDialogs.Alert(message, "Validation errors occured.", "Ok");
+        }
     }
 }

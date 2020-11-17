@@ -1,12 +1,45 @@
-﻿using System;
+﻿    using System;
+using System.ComponentModel;
+using System.Windows.Input;
+using AvanadeLogin.Core.Models;
+using AvanadeLogin.Core.Services;
 using MvvmCross.ViewModels;
+using ReactiveUI;
 
 namespace AvanadeLogin.Core.ViewModels
 {
-    public class NewAccountViewModel : MvxViewModel
+    public class NewAccountViewModel : MvxViewModel, INotifyPropertyChanged
     {
-        public NewAccountViewModel()
+        private readonly IUserAccountService _userAccountService;
+
+        public NewAccountViewModel(IUserAccountService userAccountService)
         {
+            _userAccountService = userAccountService;
+            Model = new UserAccountModel();
+
+            this.CreateAccountCommand = ReactiveCommand.CreateFromTask(async () =>
+            {
+                Console.WriteLine("Account Created!");
+                Model.Validade();
+            },
+                this.WhenAnyValue(
+                x => x.Model.FirstName,
+                x => x.Model.LastName,
+                x => x.Model.Username,
+                x => x.Model.Password,
+                x => x.Model.PhoneNumber,
+                x => x.Model.ServiceStartDate,
+                (firstName, lastName, username, password, phoneNumber, serviceStartDate) =>
+                    !string.IsNullOrEmpty(Model.FirstName) &&
+                    !string.IsNullOrEmpty(Model.LastName) &&
+                    !string.IsNullOrEmpty(Model.Username) &&
+                    !string.IsNullOrEmpty(Model.Password) &&
+                    !string.IsNullOrEmpty(Model.PhoneNumber) &&
+                    !string.IsNullOrEmpty(Model.ServiceStartDate)));
         }
+
+        public UserAccountModel Model {get; set;}
+
+        public ICommand CreateAccountCommand { get; }
     }
 }
