@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using PropertyChanged;
 using ReactiveUI;
@@ -12,8 +13,12 @@ namespace AvanadeLogin.Core.ViewModels
 {
     public class SignInViewModel : MvxViewModel, INotifyPropertyChanged
     {
-        public SignInViewModel()
+        private readonly IMvxNavigationService _navigationService;
+
+        public SignInViewModel(IMvxNavigationService navigationService)
         {
+            _navigationService = navigationService;
+
             this.SignInCommand = ReactiveCommand.Create(() =>
             {
                 Console.WriteLine("Signed In");
@@ -23,17 +28,18 @@ namespace AvanadeLogin.Core.ViewModels
                 (userName, password) =>
                     !string.IsNullOrEmpty(userName) &&
                     !string.IsNullOrEmpty(password)));
+
+            this.CreateAccountCommand = ReactiveCommand.CreateFromTask(() =>
+            {
+                return _navigationService.Navigate<NewAccountViewModel>();
+            });
         }
 
         public string UserName { get; set; }
         public string Password { get; set; }
 
-        //Reactive?
+        
         public ICommand SignInCommand { get; }
-
-        public IMvxCommand CreateAccountCommand => new MvxCommand(() =>
-        {
-            Console.WriteLine("Account Create");
-        });
+        public ICommand CreateAccountCommand { get; }
     }
 }
