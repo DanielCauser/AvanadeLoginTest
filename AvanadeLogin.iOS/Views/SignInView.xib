@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInView">
+            <connections>
+                <outlet property="UserPasswordTextField" destination="rzX-Pi-NiF" id="name-outlet-rzX-Pi-NiF"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="UsernameTextField" destination="7Qm-xq-71G" id="name-outlet-7Qm-xq-71G"/>
+                <outlet property="SignInButton" destination="5dS-IR-SsP" id="name-outlet-5dS-IR-SsP"/>
+                <outlet property="CreateAccountButton" destination="MEH-wH-Mm0" id="name-outlet-MEH-wH-Mm0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Qm-xq-71G">
+                    <rect key="frame" x="91" y="288" width="232" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="username"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rzX-Pi-NiF">
+                    <rect key="frame" x="91" y="342" width="232" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="password"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dS-IR-SsP">
+                    <rect key="frame" x="128" y="441" width="158" height="30"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="158" id="PF8-Hb-J3z"/>
+                    </constraints>
+                    <size key="titleShadowOffset" width="20" height="20"/>
+                    <state key="normal" title="Sign In">
+                        <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deb-Qt-wNS" misplaced="YES">
+                    <rect key="frame" x="135" y="44" width="144" height="60"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEH-wH-Mm0">
+                    <rect key="frame" x="114.5" y="523" width="185" height="30"/>
+                    <size key="titleShadowOffset" width="20" height="20"/>
+                    <state key="normal" title="New User? Create Account">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7Qm-xq-71G" firstAttribute="top" secondItem="2" secondAttribute="top" constant="288" id="CZO-IQ-lm7"/>
+                <constraint firstItem="deb-Qt-wNS" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="EeL-lf-gEb"/>
+                <constraint firstItem="5dS-IR-SsP" firstAttribute="centerX" secondItem="MEH-wH-Mm0" secondAttribute="centerX" id="GuS-z3-UYR"/>
+                <constraint firstItem="7Qm-xq-71G" firstAttribute="leading" secondItem="rzX-Pi-NiF" secondAttribute="leading" id="JWU-sD-7Od"/>
+                <constraint firstItem="rzX-Pi-NiF" firstAttribute="centerX" secondItem="5dS-IR-SsP" secondAttribute="centerX" id="Odt-Kr-Xof"/>
+                <constraint firstItem="5dS-IR-SsP" firstAttribute="top" secondItem="rzX-Pi-NiF" secondAttribute="bottom" constant="65" id="Q18-rE-7t4"/>
+                <constraint firstItem="deb-Qt-wNS" firstAttribute="top" secondItem="2" secondAttribute="topMargin" id="VIh-f0-FQ2"/>
+                <constraint firstItem="7Qm-xq-71G" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="91" id="dGj-XX-Obi"/>
+                <constraint firstItem="rzX-Pi-NiF" firstAttribute="top" secondItem="7Qm-xq-71G" secondAttribute="bottom" constant="20" id="e4p-mb-cmy"/>
+                <constraint firstItem="deb-Qt-wNS" firstAttribute="centerX" secondItem="7Qm-xq-71G" secondAttribute="centerX" id="hUG-Hx-kOC"/>
+                <constraint firstItem="7Qm-xq-71G" firstAttribute="trailing" secondItem="rzX-Pi-NiF" secondAttribute="trailing" id="owB-Tw-CIm"/>
+                <constraint firstItem="MEH-wH-Mm0" firstAttribute="top" secondItem="5dS-IR-SsP" secondAttribute="bottom" constant="52" id="x8g-MF-Ue7"/>
+            </constraints>
+            <point key="canvasLocation" x="-36.231884057971016" y="9.375"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

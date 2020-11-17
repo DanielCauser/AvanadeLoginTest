@@ -69,6 +69,9 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+      <PackageReference Include="MvvmCross">
+        <Version>7.1.2</Version>
+      </PackageReference>
     </ItemGroup>
     <ItemGroup>
         <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -116,10 +119,11 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
+        <Folder Include="Views\" />
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
-        <InterfaceDefinition Include="Main.storyboard" />
+        <InterfaceDefinition Include="Views\SignInView.xib" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -129,10 +133,16 @@
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
         <Compile Include="SceneDelegate.cs" />
-        <Compile Include="ViewController.cs" />
-        <Compile Include="ViewController.designer.cs">
-            <DependentUpon>ViewController.cs</DependentUpon>
+        <Compile Include="Views\SignInView.cs" />
+        <Compile Include="Views\SignInView.designer.cs">
+          <DependentUpon>SignInView.cs</DependentUpon>
         </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\AvanadeLogin.Core\AvanadeLogin.Core.csproj">
+        <Project>{DE1CECC6-E508-4CEF-9E1F-C0F99E45DE10}</Project>
+        <Name>AvanadeLogin.Core</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

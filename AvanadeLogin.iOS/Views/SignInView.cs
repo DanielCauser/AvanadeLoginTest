@@ -1,12 +1,12 @@
-﻿using Foundation;
-using System;
+﻿using System;
+
 using UIKit;
 
-namespace AvanadeLogin.iOS
+namespace AvanadeLogin.iOS.Views
 {
-    public partial class ViewController : UIViewController
+    public partial class SignInView : UIViewController
     {
-        public ViewController(IntPtr handle) : base(handle)
+        public SignInView() : base("SignInView", null)
         {
         }
 
@@ -23,3 +23,4 @@ namespace AvanadeLogin.iOS
         }
     }
 }
+
