@@ -1,10 +1,9 @@
 ﻿using AvanadeLogin.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Views;
-//using TipCalc.Core.ViewModels;
 using UIKit;
 
-namespace TipCalc.iOS
+namespace AvanadeLogin.iOS
 {
     public partial class TipView : MvxViewController<TipViewModel>
     {

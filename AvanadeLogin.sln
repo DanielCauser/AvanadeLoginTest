@@ -5,9 +5,7 @@ VisualStudioVersion = 16.0.808.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanadeLogin.Core", "AvanadeLogin.Core\AvanadeLogin.Core.csproj", "{DE1CECC6-E508-4CEF-9E1F-C0F99E45DE10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanadeLogin.iOS", "AvanadeLogin.iOS\AvanadeLogin.iOS.csproj", "{BD87029B-BF8C-4FDF-A5B1-18C66844991C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.iOS", "TipCalc.iOS\TipCalc.iOS.csproj", "{9F649F0F-E5E4-4A40-B292-80A73EE88D01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanadeLogin.iOS", "AvanadeLogin.iOS\AvanadeLogin.iOS.csproj", "{9F649F0F-E5E4-4A40-B292-80A73EE88D01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +23,6 @@ Global
 		{DE1CECC6-E508-4CEF-9E1F-C0F99E45DE10}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{DE1CECC6-E508-4CEF-9E1F-C0F99E45DE10}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{DE1CECC6-E508-4CEF-9E1F-C0F99E45DE10}.Release|iPhone.Build.0 = Release|Any CPU
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Debug|iPhone.Build.0 = Debug|iPhone
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Release|iPhone.ActiveCfg = Release|iPhone
-		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Release|iPhone.Build.0 = Release|iPhone
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator

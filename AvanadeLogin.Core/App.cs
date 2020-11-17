@@ -10,7 +10,7 @@ namespace AvanadeLogin.Core
         {
             //Mvx.IoCProvider.RegisterType<ICalculationService, CalculationService>();
 
-            RegisterAppStart<SignInViewModel>();
+            RegisterAppStart<TipViewModel>();
         }
     }
 }
