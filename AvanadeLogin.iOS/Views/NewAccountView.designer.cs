@@ -1,6 +1,6 @@
 ﻿// WARNING
 //
-// This file has been generated automatically by Xamarin Studio from the outlets and
+// This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
 // Manual changes to this file will not be maintained.
 //
@@ -11,11 +11,73 @@ using UIKit;
 
 namespace AvanadeLogin.iOS.Views
 {
-    [Register("NewAccountView")]
+    [Register ("NewAccountView")]
     partial class NewAccountView
     {
-        void ReleaseDesignerOutlets()
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton CreateAccountButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField FirstNameTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField LastNameTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField PasswordTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField PhoneNumberTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField ServiceStartDateTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField UsernameTextField { get; set; }
+
+        void ReleaseDesignerOutlets ()
         {
+            if (CreateAccountButton != null) {
+                CreateAccountButton.Dispose ();
+                CreateAccountButton = null;
+            }
+
+            if (FirstNameTextField != null) {
+                FirstNameTextField.Dispose ();
+                FirstNameTextField = null;
+            }
+
+            if (LastNameTextField != null) {
+                LastNameTextField.Dispose ();
+                LastNameTextField = null;
+            }
+
+            if (PasswordTextField != null) {
+                PasswordTextField.Dispose ();
+                PasswordTextField = null;
+            }
+
+            if (PhoneNumberTextField != null) {
+                PhoneNumberTextField.Dispose ();
+                PhoneNumberTextField = null;
+            }
+
+            if (ServiceStartDateTextField != null) {
+                ServiceStartDateTextField.Dispose ();
+                ServiceStartDateTextField = null;
+            }
+
+            if (UsernameTextField != null) {
+                UsernameTextField.Dispose ();
+                UsernameTextField = null;
+            }
         }
     }
 }

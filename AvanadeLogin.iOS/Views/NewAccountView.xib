@@ -1,18 +1,130 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703" />
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAccountView">
             <connections>
-                <outlet property="view" destination="2" id="RRd-Eg-VrN" />
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="FirstNameTextField" destination="190" id="name-outlet-190"/>
+                <outlet property="LastNameTextField" destination="191" id="name-outlet-191"/>
+                <outlet property="UsernameTextField" destination="A4g-lh-kce" id="name-outlet-A4g-lh-kce"/>
+                <outlet property="PasswordTextField" destination="194" id="name-outlet-194"/>
+                <outlet property="PhoneNumberTextField" destination="MVs-zQ-Eej" id="name-outlet-MVs-zQ-Eej"/>
+                <outlet property="ServiceStartDateTextField" destination="Gss-yX-avk" id="name-outlet-Gss-yX-avk"/>
+                <outlet property="CreateAccountButton" destination="X53-KC-Gln" id="name-outlet-X53-KC-Gln"/>
             </connections>
         </placeholder>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder" />
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="2">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7k-cR-Jsd" showsHorizontalScrollIndicator="NO" bouncesZoom="NO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="190">
+                            <rect key="frame" x="74" y="136" width="259" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="BVP-HH-fXN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="191">
+                            <rect key="frame" x="74" y="174" width="259" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="TKS-3o-Roo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="194">
+                            <rect key="frame" x="74" y="250" width="259" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="lJ0-xs-oNg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="password"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVs-zQ-Eej">
+                            <rect key="frame" x="74" y="288" width="259" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Ya3-gL-qJD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="tel"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A4g-lh-kce">
+                            <rect key="frame" x="74" y="212" width="259" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="VtO-To-YwM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="username"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="New Account" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="189">
+                            <rect key="frame" x="35" y="37" width="344" height="52"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="zjE-2O-Sid"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Service Start Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gss-yX-avk">
+                            <rect key="frame" x="74" y="326" width="259" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="LFv-72-A9d"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" textContentType="tel"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X53-KC-Gln">
+                            <rect key="frame" x="150" y="446" width="107" height="30"/>
+                            <state key="normal" title="Create Account"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="189" firstAttribute="leading" secondItem="S7k-cR-Jsd" secondAttribute="leading" constant="35" id="17g-cb-l2l"/>
+                        <constraint firstItem="191" firstAttribute="top" secondItem="190" secondAttribute="bottom" constant="8" id="20k-22-rEz"/>
+                        <constraint firstAttribute="trailing" secondItem="189" secondAttribute="trailing" constant="35" id="4OJ-Ju-dRL"/>
+                        <constraint firstItem="190" firstAttribute="leading" secondItem="191" secondAttribute="leading" id="6MM-Js-Cej"/>
+                        <constraint firstItem="X53-KC-Gln" firstAttribute="top" secondItem="Gss-yX-avk" secondAttribute="bottom" constant="90" id="A4a-TI-eQH"/>
+                        <constraint firstItem="190" firstAttribute="trailing" secondItem="191" secondAttribute="trailing" id="Ckm-RU-pax"/>
+                        <constraint firstItem="A4g-lh-kce" firstAttribute="top" secondItem="191" secondAttribute="bottom" constant="8" id="Ed6-mp-gjb"/>
+                        <constraint firstItem="MVs-zQ-Eej" firstAttribute="leading" secondItem="Gss-yX-avk" secondAttribute="leading" id="I3u-xg-voS"/>
+                        <constraint firstItem="MVs-zQ-Eej" firstAttribute="trailing" secondItem="Gss-yX-avk" secondAttribute="trailing" id="ITU-eQ-pb6"/>
+                        <constraint firstItem="190" firstAttribute="top" secondItem="189" secondAttribute="bottom" constant="47" id="JD4-Pi-U3A"/>
+                        <constraint firstItem="194" firstAttribute="top" secondItem="A4g-lh-kce" secondAttribute="bottom" constant="8" id="O5R-kT-SFS"/>
+                        <constraint firstAttribute="trailing" secondItem="190" secondAttribute="trailing" constant="81" id="Tr7-c0-RqQ"/>
+                        <constraint firstItem="A4g-lh-kce" firstAttribute="leading" secondItem="194" secondAttribute="leading" id="cBn-RG-eRl"/>
+                        <constraint firstItem="Gss-yX-avk" firstAttribute="top" secondItem="MVs-zQ-Eej" secondAttribute="bottom" constant="8" id="cxM-Ja-uEj"/>
+                        <constraint firstItem="191" firstAttribute="trailing" secondItem="A4g-lh-kce" secondAttribute="trailing" id="eea-Gw-FCM"/>
+                        <constraint firstItem="189" firstAttribute="centerX" secondItem="S7k-cR-Jsd" secondAttribute="centerX" id="fQU-P1-l8S"/>
+                        <constraint firstAttribute="bottom" secondItem="X53-KC-Gln" secondAttribute="bottom" constant="420" id="iCR-lm-T1D"/>
+                        <constraint firstItem="189" firstAttribute="top" secondItem="S7k-cR-Jsd" secondAttribute="top" constant="37" id="jgl-R9-VpN"/>
+                        <constraint firstItem="190" firstAttribute="leading" secondItem="S7k-cR-Jsd" secondAttribute="leading" constant="74" id="kev-f6-CDp"/>
+                        <constraint firstItem="A4g-lh-kce" firstAttribute="trailing" secondItem="194" secondAttribute="trailing" id="lkv-vc-1uI"/>
+                        <constraint firstItem="191" firstAttribute="leading" secondItem="A4g-lh-kce" secondAttribute="leading" id="oqa-Jx-iI0"/>
+                        <constraint firstItem="MVs-zQ-Eej" firstAttribute="top" secondItem="194" secondAttribute="bottom" constant="8" id="qqP-q5-cRr"/>
+                        <constraint firstItem="194" firstAttribute="leading" secondItem="MVs-zQ-Eej" secondAttribute="leading" id="uci-7Y-Szf"/>
+                        <constraint firstItem="194" firstAttribute="trailing" secondItem="MVs-zQ-Eej" secondAttribute="trailing" id="yEE-I5-SxU"/>
+                        <constraint firstItem="Gss-yX-avk" firstAttribute="centerX" secondItem="X53-KC-Gln" secondAttribute="centerX" id="ySB-87-5C0"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="S7k-cR-Jsd" secondAttribute="trailing" id="2Kw-nQ-R8w"/>
+                <constraint firstItem="S7k-cR-Jsd" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="59K-ow-1fc"/>
+                <constraint firstItem="S7k-cR-Jsd" firstAttribute="top" secondItem="2" secondAttribute="top" id="BUb-15-kqO"/>
+                <constraint firstAttribute="bottom" secondItem="S7k-cR-Jsd" secondAttribute="bottom" id="RC2-5m-TCA"/>
+            </constraints>
+            <point key="canvasLocation" x="-247.82608695652175" y="-53.571428571428569"/>
         </view>
     </objects>
 </document>

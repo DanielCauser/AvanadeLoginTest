@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountCreatedView">
+            <connections>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+                <outlet property="BackToLogInButton" destination="9Vb-jO-jdQ" id="name-outlet-9Vb-jO-jdQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Created" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCb-us-7gv">
+                    <rect key="frame" x="73" y="303" width="268" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="gZn-IP-bB9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vb-jO-jdQ">
+                    <rect key="frame" x="145" y="441" width="124" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="124" id="e7l-ee-njG"/>
+                    </constraints>
+                    <state key="normal" title="Log In Now?">
+                        <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SCb-us-7gv" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="73" id="3el-uK-6mD"/>
+                <constraint firstItem="SCb-us-7gv" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="FFe-hD-1uM"/>
+                <constraint firstItem="SCb-us-7gv" firstAttribute="top" secondItem="2" secondAttribute="top" constant="303" id="QdR-Nl-sJn"/>
+                <constraint firstItem="9Vb-jO-jdQ" firstAttribute="top" secondItem="SCb-us-7gv" secondAttribute="bottom" constant="53" id="a2e-0m-Tbb"/>
+                <constraint firstItem="SCb-us-7gv" firstAttribute="centerX" secondItem="9Vb-jO-jdQ" secondAttribute="centerX" id="hlP-Bf-xbO"/>
+            </constraints>
+            <point key="canvasLocation" x="-247.82608695652175" y="-53.571428571428569"/>
+        </view>
+    </objects>
+</document>

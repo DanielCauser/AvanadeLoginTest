@@ -88,6 +88,7 @@
     <InterfaceDefinition Include="Views\TipView.xib" />
     <InterfaceDefinition Include="Views\SignInView.xib" />
     <InterfaceDefinition Include="Views\NewAccountView.xib" />
+    <InterfaceDefinition Include="Views\AccountCreatedView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -107,6 +108,10 @@
     <Compile Include="Views\NewAccountView.cs" />
     <Compile Include="Views\NewAccountView.designer.cs">
       <DependentUpon>NewAccountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccountCreatedView.cs" />
+    <Compile Include="Views\AccountCreatedView.designer.cs">
+      <DependentUpon>AccountCreatedView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
