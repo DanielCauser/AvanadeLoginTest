@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanadeLogin.Core", "Avanad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvanadeLogin.iOS", "AvanadeLogin.iOS\AvanadeLogin.iOS.csproj", "{BD87029B-BF8C-4FDF-A5B1-18C66844991C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipCalc.iOS", "TipCalc.iOS\TipCalc.iOS.csproj", "{9F649F0F-E5E4-4A40-B292-80A73EE88D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -31,6 +33,14 @@ Global
 		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Debug|iPhone.Build.0 = Debug|iPhone
 		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Release|iPhone.ActiveCfg = Release|iPhone
 		{BD87029B-BF8C-4FDF-A5B1-18C66844991C}.Release|iPhone.Build.0 = Release|iPhone
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Debug|iPhone.Build.0 = Debug|iPhone
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhone.ActiveCfg = Release|iPhone
+		{9F649F0F-E5E4-4A40-B292-80A73EE88D01}.Release|iPhone.Build.0 = Release|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

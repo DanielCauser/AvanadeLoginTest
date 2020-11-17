@@ -123,7 +123,6 @@
     </ItemGroup>
     <ItemGroup>
         <InterfaceDefinition Include="LaunchScreen.storyboard" />
-        <InterfaceDefinition Include="Views\SignInView.xib" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Info.plist" />
@@ -133,10 +132,6 @@
         <Compile Include="Main.cs" />
         <Compile Include="AppDelegate.cs" />
         <Compile Include="SceneDelegate.cs" />
-        <Compile Include="Views\SignInView.cs" />
-        <Compile Include="Views\SignInView.designer.cs">
-          <DependentUpon>SignInView.cs</DependentUpon>
-        </Compile>
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\AvanadeLogin.Core\AvanadeLogin.Core.csproj">
