@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace TipCalc.UI.iOS.Views
+namespace AvanadeLogin.iOS.Views
 {
     [Register ("AccountCreatedView")]
     partial class AccountCreatedView

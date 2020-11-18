@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>TipCalc.iOS</string>
+	<string>AvanadeLogin.iOS</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.mvvmcross.tipcalc-ui-ios</string>
+	<string>com.causerexception.AvanadeLogin</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -42,6 +42,6 @@
 	<key>XSAppIconAssets</key>
 	<string>Resources/Images.xcassets/AppIcons.appiconset</string>
 	<key>CFBundleDisplayName</key>
-	<string>TipCalc.iOS</string>
+	<string>AvanadeLogin.iOS</string>
 </dict>
 </plist>

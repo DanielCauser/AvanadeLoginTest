@@ -3,7 +3,7 @@ using AvanadeLogin.Core.ViewModels;
 using MvvmCross.Platforms.Ios.Views;
 using UIKit;
 
-namespace TipCalc.UI.iOS.Views
+namespace AvanadeLogin.iOS.Views
 {
     public partial class AccountCreatedView : MvxViewController<AccountCreatedViewModel>
     {

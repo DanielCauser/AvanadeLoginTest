@@ -4,7 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.mvvmcross.tipcalc-ui-ios</string>
+		<string>$(AppIdentifierPrefix)com.causerexception.AvanadeLogin</string>
 	</array>
 </dict>
 </plist>

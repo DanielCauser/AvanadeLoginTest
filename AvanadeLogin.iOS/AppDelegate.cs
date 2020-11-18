@@ -1,6 +1,5 @@
 ﻿using Foundation;
 using UIKit;
-//using TipCalc.Core;
 using AvanadeLogin.Core;
 using MvvmCross.Platforms.Ios.Core;
 
