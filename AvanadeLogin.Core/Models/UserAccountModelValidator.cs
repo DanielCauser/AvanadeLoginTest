@@ -26,11 +26,20 @@ namespace AvanadeLogin.Core.Models
             RuleFor(x => x.Password)
                 .Must(OneLowerCase).WithMessage("At least one letter must be lowercase.");
 
+            RuleFor(x => x.Password)
+                .Must(NotBeRepetitive).WithMessage("Must not have repetitive sequence of characters.");
 
-            //RuleFor(x => x.Forename).NotEmpty().WithMessage("Please specify a first name");
-            //RuleFor(x => x.Discount).NotEqual(0).When(x => x.HasDiscount);
-            //RuleFor(x => x.Address).Length(20, 250);
-            //RuleFor(x => x.Postcode).Must(BeAValidPostcode).WithMessage("Please specify a valid postcode");
+            RuleFor(x => x.ServiceStartDate)
+                .GreaterThan(DateTime.Now).WithMessage("A past date is not allowed.");
+
+            RuleFor(x => x.ServiceStartDate)
+                .LessThanOrEqualTo(DateTime.Now.AddDays(30)).WithMessage("A date more than 30 days into the future is not allowed.");
+        }
+
+        private bool NotBeRepetitive(string arg)
+        {
+            var reg = new Regex("^(.)\\1{3,}$");
+            return reg.IsMatch(arg);
         }
 
         private bool NotContainsSpecialCharacters(string arg)

@@ -10,6 +10,7 @@ namespace AvanadeLogin.Core.Models
         public UserAccountModel()
         {
             Validator = new UserAccountModelValidator();
+            ServiceStartDate = DateTimeOffset.Now.Date;
         }
 
         public string FirstName { get; set; }
@@ -17,7 +18,7 @@ namespace AvanadeLogin.Core.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
-        public string ServiceStartDate { get; set; }
+        public DateTime ServiceStartDate { get; set; }
 
         public void Validade()
         {

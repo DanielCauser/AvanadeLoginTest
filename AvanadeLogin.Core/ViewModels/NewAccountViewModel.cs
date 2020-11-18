@@ -28,14 +28,12 @@ namespace AvanadeLogin.Core.ViewModels
                 x => x.Model.Username,
                 x => x.Model.Password,
                 x => x.Model.PhoneNumber,
-                x => x.Model.ServiceStartDate,
-                (firstName, lastName, username, password, phoneNumber, serviceStartDate) =>
+                (firstName, lastName, username, password, phoneNumber) =>
                     !string.IsNullOrEmpty(Model.FirstName) &&
                     !string.IsNullOrEmpty(Model.LastName) &&
                     !string.IsNullOrEmpty(Model.Username) &&
                     !string.IsNullOrEmpty(Model.Password) &&
-                    !string.IsNullOrEmpty(Model.PhoneNumber) &&
-                    !string.IsNullOrEmpty(Model.ServiceStartDate)));
+                    !string.IsNullOrEmpty(Model.PhoneNumber)));
         }
 
         public UserAccountModel Model {get; set;}

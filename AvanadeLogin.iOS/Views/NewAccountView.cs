@@ -1,4 +1,5 @@
 ﻿using System;
+using AvanadeLogin.Core.Converters;
 using AvanadeLogin.Core.ViewModels;
 using MvvmCross.Platforms.Ios.Views;
 using UIKit;
@@ -20,7 +21,18 @@ namespace AvanadeLogin.iOS.Views
             set.Bind(UsernameTextField).To(vm => vm.Model.Username);
             set.Bind(PasswordTextField).To(vm => vm.Model.Password);
             set.Bind(PhoneNumberTextField).To(vm => vm.Model.PhoneNumber);
-            set.Bind(ServiceStartDateTextField).To(vm => vm.Model.ServiceStartDate);
+
+            UIDatePicker DatePicker = new UIDatePicker();
+            DatePicker.Mode = UIDatePickerMode.Date;
+            ServiceStartDateTextField.InputView = DatePicker;
+
+            //set.Bind(ServiceStartDateTextField)
+            //    .WithConversion<DateToStringConverter>().To(vm => vm.Model.ServiceStartDate);
+            set.Bind(DatePicker).To(vm => vm.Model.ServiceStartDate);
+
+            set.Bind(ServiceStartDateTextField)
+                .WithConversion<DateToStringConverter>().To(vm => vm.Model.ServiceStartDate);
+
             set.Bind(CreateAccountButton).To(vm => vm.CreateAccountCommand);
             set.Apply();
         }
