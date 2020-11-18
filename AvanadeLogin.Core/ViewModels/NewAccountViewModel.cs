@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using AvanadeLogin.Core.Models;
 using AvanadeLogin.Core.Services;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using ReactiveUI;
 
@@ -11,16 +12,20 @@ namespace AvanadeLogin.Core.ViewModels
     public class NewAccountViewModel : MvxViewModel, INotifyPropertyChanged
     {
         private readonly IUserAccountService _userAccountService;
+        private readonly IMvxNavigationService _mvxNavigationService;
 
-        public NewAccountViewModel(IUserAccountService userAccountService)
+        public NewAccountViewModel(IUserAccountService userAccountService, IMvxNavigationService mvxNavigationService)
         {
             _userAccountService = userAccountService;
+            _mvxNavigationService = mvxNavigationService;
             Model = new UserAccountModel();
 
             this.CreateAccountCommand = ReactiveCommand.CreateFromTask(async () =>
             {
-                Console.WriteLine("Account Created!");
                 Model.Validade();
+                await _userAccountService.CreateUserAccount(Model);
+                await _mvxNavigationService.Navigate<AccountCreatedViewModel>();
+                await _mvxNavigationService.Close(this); 
             },
                 this.WhenAnyValue(
                 x => x.Model.FirstName,

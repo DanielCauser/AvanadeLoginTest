@@ -14,7 +14,9 @@ namespace TipCalc.UI.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+            var set = this.CreateBindingSet();
+            set.Bind(BackToLogInButton).To(vm => vm.BackToLogInCommand);
+            set.Apply();
         }
     }
 }

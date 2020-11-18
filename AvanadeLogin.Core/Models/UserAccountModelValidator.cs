@@ -38,7 +38,7 @@ namespace AvanadeLogin.Core.Models
 
         private bool NotBeRepetitive(string arg)
         {
-            var reg = new Regex("^(.)\\1{3,}$");
+            var reg = new Regex("(?!\\s)[^%\n]*$");
             return reg.IsMatch(arg);
         }
 

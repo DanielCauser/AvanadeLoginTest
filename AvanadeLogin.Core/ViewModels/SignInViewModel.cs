@@ -1,8 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading.Tasks;
 using System.Windows.Input;
+using AvanadeLogin.Core.InfrastructureServices;
 using AvanadeLogin.Core.Services;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
@@ -15,20 +14,20 @@ namespace AvanadeLogin.Core.ViewModels
     public class SignInViewModel : MvxViewModel, INotifyPropertyChanged
     {
         private readonly IMvxNavigationService _navigationService;
-        private readonly IAuthenticationService _authenticationService;
+        private readonly IUserAccountService _userAccountService;
         private readonly IDialogueService _dialogueService;
 
         public SignInViewModel(IMvxNavigationService navigationService,
-            IAuthenticationService authenticationService,
+            IUserAccountService userAccountService,
             IDialogueService dialogueService)
         {
             _navigationService = navigationService;
-            _authenticationService = authenticationService;
+            _userAccountService = userAccountService;
             _dialogueService = dialogueService;
 
             this.SignInCommand = ReactiveCommand.CreateFromTask(async () =>
             {
-                var result = await _authenticationService.AuthenticateUser(UserName, Password);
+                var result = await _userAccountService.AuthenticateUser(UserName, Password);
 
                 if (result)
                     _dialogueService.ShowInformation("Great Success!!");
