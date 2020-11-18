@@ -30,10 +30,10 @@ namespace AvanadeLogin.Core.Models
                 .Must(NotBeRepetitive).WithMessage("Must not have repetitive sequence of characters.");
 
             RuleFor(x => x.ServiceStartDate)
-                .GreaterThanOrEqualTo(DateTime.Now).WithMessage("A past date is not allowed.");
+                .GreaterThanOrEqualTo(DateTime.Now.Date).WithMessage("A past date is not allowed.");
 
             RuleFor(x => x.ServiceStartDate)
-                .LessThanOrEqualTo(DateTime.Now.AddDays(30)).WithMessage("A date more than 30 days into the future is not allowed.");
+                .LessThanOrEqualTo(DateTime.Now.Date.AddDays(30)).WithMessage("A date more than 30 days into the future is not allowed.");
         }
 
         private bool NotBeRepetitive(string arg)

@@ -19,7 +19,7 @@ namespace AvanadeLogin.Core.Services
         {
             var user = await _secureStorageService.Get<UserAccountModel>(username);
             if (user is null)
-                throw new UserAccounException("The acount does not exist.");
+                throw new UserAccounException("The account does not exist.");
 
             if (user.Password != password)
                 throw new UserAccounException("Password incorrect.");
