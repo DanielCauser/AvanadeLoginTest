@@ -16,7 +16,7 @@ namespace AvanadeLogin.Core.Converters
                 return value = $"({value}";
             if (value.Length == 4)
                 return value += ")-";
-            else if (value.Length == 8)
+            else if (value.Length == 9)
                 value += "-";
 
             return value;
