@@ -88,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
-    <InterfaceDefinition Include="Views\TipView.xib" />
     <InterfaceDefinition Include="Views\SignInView.xib" />
     <InterfaceDefinition Include="Views\NewAccountView.xib" />
     <InterfaceDefinition Include="Views\AccountCreatedView.xib" />
@@ -100,10 +99,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Views\TipView.cs" />
-    <Compile Include="Views\TipView.designer.cs">
-      <DependentUpon>TipView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\SignInView.cs" />
     <Compile Include="Views\SignInView.designer.cs">
       <DependentUpon>SignInView.cs</DependentUpon>

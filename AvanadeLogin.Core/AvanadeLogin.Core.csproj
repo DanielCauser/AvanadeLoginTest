@@ -21,4 +21,7 @@
     <PackageReference Include="FluentValidation.ValidatorAttribute" Version="8.6.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ViewModels\TipViewModel.cs" />
+  </ItemGroup>
 </Project>
