@@ -1,22 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
 namespace AvanadeLogin.Core.InfrastructureServices
 {
+    /// <summary>
+    /// In theory, this service should save the user data to the phone local secure storage.
+    /// However, some folk were having trouble Provisioning given that for that the app needs to use entitlements.plist file.
+    /// Therefore, I will switch this service to save/get data from and to the app memory.
+    /// </summary>
     public class SecureStorageService : ISecureStorageService
     {
-        public Task<string> Get(string key)
+        private static IDictionary<string, string> LocalSecureStorageSimulation;
+
+        public SecureStorageService()
         {
-            return SecureStorage.GetAsync(key);
+            LocalSecureStorageSimulation = new Dictionary<string, string>();
         }
 
-        public async Task<T> Get<T>(string key) where T : new()
+        public Task<string> Get(string key)
         {
-            var item = await SecureStorage.GetAsync(key);
-            
-            return !string.IsNullOrEmpty(item) ? JsonConvert.DeserializeObject<T>(item) : default(T);
+            LocalSecureStorageSimulation.TryGetValue(key, out string value);
+            return Task.FromResult(value);
+        }
+
+        public Task<T> Get<T>(string key) where T : new()
+        {
+            LocalSecureStorageSimulation.TryGetValue(key, out string value);
+            return !string.IsNullOrEmpty(value) ? Task.FromResult(JsonConvert.DeserializeObject<T>(value)) : Task.FromResult(default(T));
         }
 
         public Task Remove(string key)
@@ -26,13 +39,23 @@ namespace AvanadeLogin.Core.InfrastructureServices
 
         public Task Set(string key, string item)
         {
-            return SecureStorage.SetAsync(key, item);
+            throw new NotImplementedException();
         }
 
-        public Task Set(string key, object item)
+        public async Task Set(string key, object item)
         {
+            var exists = await Get(key);
+
             var save = JsonConvert.SerializeObject(item);
-            return SecureStorage.SetAsync(key, save);
+
+            if (!string.IsNullOrEmpty(exists))
+            {
+                LocalSecureStorageSimulation[key] = save;
+                return;
+            }
+
+            LocalSecureStorageSimulation.Add(key, save);
+            return;
         }
     }
 }
