@@ -33,7 +33,7 @@ Validations in this project happen on the ViewModel and on the Service layer, an
 
 Service layer has the responsability of validating the information against other data and/or services. The ViewModel/Model validation validates the data input from the user
 ### Services
-Services mainly interact with ViewModels(VMs), take in user data process it, making use of infrastructure servies or not, and finally VMs comunicating with the VM the results.
+Services mainly interact with ViewModels(VMs), take in user data process it, making use of infrastructure services when needed, and finally VMs comunicating with the VM the results.
 ### Infrastructure Services
 The infrastructure services are anything that have to be implemented on the main platforms, or services that interact with a local database, or services that comunicate with a backend server etc. These services will focus on more technology specific implementations.
 
