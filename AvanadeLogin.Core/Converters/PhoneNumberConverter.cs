@@ -18,6 +18,8 @@ namespace AvanadeLogin.Core.Converters
                 return value += ")-";
             else if (value.Length == 9)
                 value += "-";
+            else if (value.Length > 14)
+                return value.Substring(0, 14);
 
             return value;
         }
