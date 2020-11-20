@@ -41,9 +41,9 @@ The infrastructure services are anything that have to be implemented on the main
 In my opinion, a successfull and clean app takes in account the following items:
 
 
-* Effective UX/UI.
+* Effective UX/UI. (Animations, Transitions, Reusage of components)
 * Automated CI/CD pipeline.
-* Resilient connection with the web/backend server.
+* Resilient connection with the web/backend server.(Retry, Circuit break, cache)
 * Monitoring (AppInsights, Raygun, AppCenter).
 * Unit Testing and possibly UI Testing(Nice-to-have).
 * Release to public strategy (Alpha ,Beta testers).
