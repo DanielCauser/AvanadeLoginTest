@@ -27,7 +27,7 @@ This layer is located in the core project, it lives in the binding between the V
 ### View Models
 These classes are the core of the application and hold logic such as navigation, View behaviors, and basically orchestrate what and how the user command and data will interact with multiple services.
 ### Models
-These are the representation of data used by the viewmodels, in this app we have the. These models are the DTOs that carry the information from the ViewModels to the Service layer. These models are also able to validate themselves, I chose FluentValidator library to simplify this process.
+These are the representation of data used by the viewmodels. These models are the DTOs that carry the information from the ViewModels to the Service layer. These models are also able to validate themselves, I chose FluentValidator library to simplify this process.
 ### Validations
 Validations in this project happen on the ViewModel and on the Service layer, and they are Exception Oriented. Exception oriented,means that all valitations that are not met, will throw known exceptins, which will be treated and shown to the user by the GlobalExceptionHandler service.
 
